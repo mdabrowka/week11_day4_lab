@@ -29,3 +29,8 @@ it('record store inventory starts empty', function() {
 it('record store balance starts at 0', function() {
   assert.strictEqual(recordStore.balance, 0);
 })
+
+it('record store can add record to inventory', function(){
+  recordStore.addRecord(record);
+  assert.strictEqual(recordStore.inventory.length, 1);
+})
