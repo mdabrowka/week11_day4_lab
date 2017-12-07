@@ -41,3 +41,11 @@ it('record store can list inventory', function(){
   recordStore.addRecord(record1);
   assert.deepStrictEqual(recordStore.listInventory(), ["Artist: Pink Floyd, title: Dark Side of the Moon, genre: rock, price: 7", "Artist: Pink Floyd, title: Wish You Were Here, genre: rock, price: 9" ])
 })
+
+it('recordStore can sell record', function(){
+  recordStore.addRecord(record);
+  recordStore.addRecord(record1);
+  recordStore.sellRecord(record);
+  assert.strictEqual(recordStore.inventory.length, 1);
+  assert.strictEqual(recordStore.balance, 7);
+})
