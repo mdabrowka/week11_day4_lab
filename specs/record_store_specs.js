@@ -16,4 +16,8 @@ beforeEach(function() {
 
 it('record store should have a name', function() {
   assert.strictEqual(recordStore.name, "Zack's Records");
+}),
+
+it('record store should have a city', function() {
+  assert.strictEqual(recordStore.city, "Edinburgh");
 })
