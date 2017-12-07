@@ -24,4 +24,8 @@ it('record store should have a city', function() {
 
 it('record store inventory starts empty', function() {
   assert.strictEqual(recordStore.inventory.length, 0);
+}),
+
+it('record store balance starts at 0', function() {
+  assert.strictEqual(recordStore.balance, 0);
 })
