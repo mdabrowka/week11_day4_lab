@@ -14,3 +14,11 @@ beforeEach(function() {
 it('record should have an artist', function() {
   assert.strictEqual(record.artist, "Pink Floyd");
 })
+
+it('record should have a title', function() {
+  assert.strictEqual(record.title, "Dark Side of the Moon");
+})
+
+it('record should have an genre', function() {
+  assert.strictEqual(record.genre, "rock");
+})
