@@ -22,3 +22,7 @@ it('record should have a title', function() {
 it('record should have an genre', function() {
   assert.strictEqual(record.genre, "rock");
 })
+
+it('record should have a price', function() {
+  assert.strictEqual(record.price, 7);
+})
