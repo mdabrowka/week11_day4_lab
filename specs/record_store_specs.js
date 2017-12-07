@@ -49,3 +49,10 @@ it('recordStore can sell record', function(){
   assert.strictEqual(recordStore.inventory.length, 1);
   assert.strictEqual(recordStore.balance, 7);
 })
+
+it('record store can get financial info', function(){
+  recordStore.addRecord(record);
+  recordStore.addRecord(record1);
+  recordStore.sellRecord(record);
+  assert.deepStrictEqual(recordStore.financialInfo(), ["The balance is 7", "The inventory value is 9"])
+})
