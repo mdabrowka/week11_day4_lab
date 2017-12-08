@@ -6,6 +6,7 @@ const assert = require('assert')
 describe('RecordStore', function() {
   let recordStore;
   let record;
+  let record1;
 });
 
 beforeEach(function() {
@@ -50,9 +51,16 @@ it('recordStore can sell record', function(){
   assert.strictEqual(recordStore.balance, 7);
 })
 
-it('record store can get financial info', function(){
+// it('record store can get financial info', function(){
+//   recordStore.addRecord(record);
+//   recordStore.addRecord(record1);
+//   recordStore.sellRecord(record);
+//   assert.strictEqual(recordStore.financialInfo(), "Balance: 7, inventory value: 9")
+// })
+
+it('record store can calculate the inventory value', function() {
+  recordStore.addRecord(record);
   recordStore.addRecord(record);
   recordStore.addRecord(record1);
-  recordStore.sellRecord(record);
-  assert.deepStrictEqual(recordStore.financialInfo(), ["The balance is 7", "The inventory value is 9"])
+  assert.strictEqual(recordStore.inventoryValue(), 23);
 })
