@@ -51,16 +51,18 @@ it('recordStore can sell record', function(){
   assert.strictEqual(recordStore.balance, 7);
 })
 
-// it('record store can get financial info', function(){
-//   recordStore.addRecord(record);
-//   recordStore.addRecord(record1);
-//   recordStore.sellRecord(record);
-//   assert.strictEqual(recordStore.financialInfo(), "Balance: 7, inventory value: 9")
-// })
 
 it('record store can calculate the inventory value', function() {
   recordStore.addRecord(record);
   recordStore.addRecord(record);
   recordStore.addRecord(record1);
   assert.strictEqual(recordStore.inventoryValue(), 23);
+})
+
+it('record store can get financial info', function(){
+  recordStore.addRecord(record);
+  recordStore.addRecord(record);
+  recordStore.addRecord(record1);
+  recordStore.sellRecord(record1);
+  assert.strictEqual(recordStore.financialInfo(), "Balance: 9, inventory value: 14")
 })

@@ -32,15 +32,9 @@ RecordStore.prototype.inventoryValue = function() {
   return total;
 }
 
-
-// RecordStore.prototype.financialInfo = function() {
-//   let total = 0;
-//   for (item of this.inventory) {
-//     total += item.price;
-//   }
-//   // return `Balance: ${this.balance}, inventory value ` + total
-//   console.log(total);
-// }
+RecordStore.prototype.financialInfo = function() {
+ return `Balance: ${this.balance}, inventory value: ` + this.inventoryValue();
+}
 
 
 module.exports = RecordStore;
